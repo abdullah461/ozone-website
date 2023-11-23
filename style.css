@@ -1,0 +1,653 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow-x:hidden ;
+}
+
+.header{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    background-size: cover;
+    position: relative;   
+}
+.nav {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-logo {
+    display: inline-block;
+    max-width: 100%;
+    height: 50px;
+    margin-left: 3%;
+    padding: 10px 10px;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    /* font-size: 18px; */
+    margin-right: 10%;
+    font-family: 'Barlow', sans-serif;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 0 10px;
+    text-decoration: none;
+    color: #000;
+    overflow: hidden;
+  }
+  
+  .nav > .nav-links a:nth-child(3){
+    position: relative;
+}
+.nav > .nav-links a:nth-child(3):before{
+    content: "";
+    position: absolute;
+    bottom: -3.8px;
+    left: 0;
+    width: 100%;
+    height: .7rem;
+    background: #01be633f;
+    border-radius: .5rem;
+    transition: .35s;
+}
+.nav > .nav-links a:nth-child(3):hover::before{
+    background: #01BE62;    
+}
+  
+  .nav > #nav-check {
+    display: none;
+  }
+  
+  @media (max-width:768px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+      overflow: hidden;
+
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: #01BE633f;
+      border-radius: 10px 0px 0px 10px;
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #000;
+    }
+    .nav > .nav-btn > label > span:hover{
+        color: #01BE62;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #fff;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 20px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > .nav-links a::before{
+        width: unset;
+    }
+    .nav > .nav-links a:nth-child(3):before{
+        
+        width: 11%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
+  
+
+
+
+/* nav start 
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 5%;
+    min-height: 85px;
+    background-color: #fff;
+    position: relative;
+}
+.nav .logo img{
+    height: 30px;
+}
+.links{
+    display: flex;
+}
+.links ul {
+    display: flex;   
+}
+.links ul li{
+  display: inline;
+    padding: 15px;
+    list-style: none;
+}
+.links ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-family: 'Barlow', sans-serif;
+}
+.nav .links ul li:nth-child(3) a{
+    position: relative;
+}
+.nav .links ul li:nth-child(3) a::before{
+    content: "";
+    position: absolute;
+    bottom: -3.8px;
+    left: 0;
+    width: 100%;
+    height: .7rem;
+    background: #01be633f;
+    border-radius: .5rem;
+    transition: .35s;
+}
+.nav .links ul li:nth-child(3) a:hover::before{
+    background: #01BE62;
+    
+}
+
+/* navi /
+.nav .nav-btn {
+    display: none;
+  }
+  .nav > #nav-check {
+    display: none;
+  }
+
+*/
+
+    /* nav 
+    .nav > .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+      }
+      .nav > .nav-btn > label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+      }
+      .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      .nav > .nav-btn > label > span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+      }
+
+
+      .nav > li {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #333;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow: hidden;
+        top: 50px;
+        left: 0px;
+      }
+      .nav > li > a {
+        display: block;
+        width: 100%;
+      }
+      .nav > #nav-check:not(:checked) ~ li {
+        height: 0px;
+      }
+      .nav > #nav-check:checked ~ li {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+      }
+    } */
+    
+
+
+
+/* nav end */
+
+/* banner */
+
+.headerContent{
+    display: flex;
+    width: 100%;
+}
+
+.headerContent article{
+    width: 50%;
+    text-align: start;
+    padding: 100px 50px;
+    overflow: hidden;
+}
+article h1{
+    color: #1b222b;
+    font-size: 54px;
+    font-weight: 600;
+    font-family: 'Fraunces', serif;
+    padding-bottom: 20px;
+}
+.headerContent article p{
+    overflow: hidden;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    margin-bottom: 20px;
+    line-height: 28px;
+}
+article a button{
+    padding: 15px 30px;
+    margin-right: 15px;
+    border-radius: 30px;
+    border: none;
+    background-color: #01BE62;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+article a .s-b{
+    background-color: transparent;
+    color: #1b222b;
+    border: 1px solid #01BE62;
+}
+.banner-image{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 100px 70px;
+    overflow: hidden;
+}
+.banner-image img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #01be632d;
+    padding: 5px;
+}
+
+@media (max-width: 1024px){
+    .headerContent{
+        display: block;
+    }
+    .headerContent article{
+        width: 100%;
+        text-align: center;
+    }
+    .banner-image{
+        width: 100%;
+        padding-top: unset;
+        display: flex;
+        justify-content: center;
+    }
+    .banner-image img{
+        width: 500px;
+        height: auto;
+    }
+}
+@media (max-width: 425px){
+    .headerContent article h1{
+        font-size: 42px;
+    }
+    .headerContent article p{
+        font-size: 16px;
+    }
+    .headerContent article a button{
+        margin-right: unset;
+        margin-bottom: 15px;
+    }
+}
+/* section */
+section .container .row-1{
+    height: 100vh;
+    display: flex;
+    width: 100%;
+    
+}
+section .container .col{
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section .container .col article{
+  width: 600px;
+  height: fit-content;
+  overflow: hidden;
+  padding-inline: 50px;
+  
+}
+@media (max-width: 768px){
+    section .container .row-1{
+display: block;
+height: auto;
+}
+section .container .row-1 .col-1{
+width: auto;
+height: 100vh;
+}
+section .container .row-1 .col-2{
+    width: auto;
+    height: 100vh;
+    }
+}
+@media (max-width: 425px){
+    section .container .row-1 article p{
+        font-size: 16px;
+    }
+}
+/* column */
+/* row 1 */
+
+section .container .row-1 .col-1{
+   background: url(/images/im-4.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+
+}
+section .container .row-1 .col-2{
+ background: url(/images/im-7.jpg);
+ background-repeat: no-repeat;
+background-size: cover;
+}
+
+section .container .row-1 article h1{
+    font-size: 30px;
+       font-family: 'Fraunces', serif;
+        color: white;
+        margin-bottom: 1.5rem;
+}
+section .container .row-1 article p{
+    font-size: 18px;
+    color: hsl(212, 27%, 19%);
+    font-family: 'Poppins', sans-serif;
+  color: white;
+  margin-bottom: 1.2rem;
+
+}
+section .container .row-1 article a{
+    text-decoration: none;
+    color: hsl(212, 27%, 19%);
+    text-transform: uppercase;
+    font-weight: 800;
+  color: white;
+
+    padding: .5rem;
+    position: relative;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+
+    
+}
+section .container .row-1 article a::before{
+    content: "";
+    position: absolute;
+    bottom: .3rem;
+    left: 0;
+    width: 100%;
+    height: .7rem;
+    background: #01be633f;
+    border-radius: .5rem;
+    transition: .35s;
+}
+section .container .row-1 article a:hover::before{
+    background: #01BE62;
+    
+}
+
+/*  row 2 */
+section .container .row-2{
+    height: 100vh;
+    display: flex;
+}
+section .container .row-2 .col-4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 50px;
+}
+section .container .row-2 article h1{
+    font-size: 30px;
+       font-family: 'Fraunces', serif;
+        color: hsl(212, 27%, 19%);
+        margin-bottom: 1.5rem;
+}
+section .container .row-2 article p{
+    font-size: 18px;
+    color: hsl(212, 27%, 19%);
+    font-family: 'Barlow', sans-serif;
+    margin-bottom: 1.2rem;
+}
+section .container .row-2 article a{
+    text-decoration: none;
+    color: hsl(212, 27%, 19%);
+    text-transform: uppercase;
+    font-weight: 800;
+    padding: .5rem;
+    position: relative;
+    cursor: pointer;
+    font-family: 'Fraunces', serif;
+    
+}
+section .container .row-2 article a::before{
+    content: "";
+    position: absolute;
+    bottom: .3rem;
+    left: 0;
+    width: 100%;
+    height: .7rem;
+    background: #01BE633f;
+    border-radius: .5rem;
+    transition: .35s;
+}
+section .container .row-2 article a:hover::before{
+    background: #01BE62;
+    
+}
+
+
+
+
+
+/* third row */
+/* Graphic Design */
+section .container .row-3{
+    height: 100vh;
+    display: flex;
+}
+
+section .container .row-3 .col-5{
+    background-image: url(./images/desktop/image-graphic-design.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;       
+}
+section .container .row-3 .col-5 article{
+    margin-top: 25rem;
+}
+section .container .row-3 .col-5 article h1{
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: hsl(167, 40%, 24%);
+    margin-bottom: 1rem;
+    font-family: 'Fraunces', serif;
+}
+section .container .row-3 .col-5 article p{
+    font-size: .8rem;
+    color: hsl(167, 40%, 24%);
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Photograpy */
+    section .container .row-3 .col-6{
+    background-image: url(./images/desktop/image-photography.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+section .container .row-3 .col-6 article{
+    margin-top: 25rem;
+}
+section .container .row-3 .col-6 article h1{
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: hsl(198, 62%, 26%);
+    margin-bottom: 1rem;
+    font-family: 'Fraunces', serif;
+}
+section .container .row-3 .col-6 article p{
+    font-size: .8rem;
+    color: hsl(198, 62%, 26%);
+    font-family: 'Barlow', sans-serif;
+}
+
+
+/* Client section */
+section .client{
+    display: flex;
+    height: 80vh;
+    flex-direction: column;
+      background: hsla(42, 92%, 90%, 0.192);
+    
+}
+section .client .top-text{
+    text-align: center;
+    margin: 5rem 0 3rem;
+}
+section .client .top-text h1{
+    color: hsl(210, 4%, 67%);
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+}
+section .client p{
+    color: hsl(198, 62%, 26%);
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    font-family: 'Barlow', sans-serif;
+}
+section .client .bottom-content h3{
+    font-weight: 900;
+    font-size: 1.1rem;
+    font-family: 'Fraunces', serif;
+}
+section .client .bottom-content .name-post p{    
+font-size: .8rem;
+font-family: 'Barlow', sans-serif;
+}
+
+section .client .bottom-content{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+section .client .cl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+section .client .cl img{
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+    margin-bottom: 3rem;
+}
+section .boxes{
+    display: flex;
+    /* flex-wrap: wrap; */    
+}
+section .boxes .box img{
+    width: 100%;
+    height: 100%;
+}
+/* footer starts here */
+section footer{
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: hsl(168, 32%, 55%);
+} 
+section footer .logo{
+   color: hsl(167, 40%, 24%);
+    margin-bottom: 1.5rem;
+    font-family: 'Fraunces', serif;
+    
+}
+section footer .link{
+    margin-bottom: 1rem;
+    font-family: 'Barlow', sans-serif;
+
+}
+section footer .link ul{
+    overflow: hidden;
+}
+section footer .link ul a{
+    padding: 1rem;
+    text-decoration: none;
+    color: hsl(167, 40%, 24%);
+    cursor: pointer;
+}
+section footer .link ul a:hover{
+    color:white;
+}
+section footer .social-icons img{
+    padding: 1rem;
+    cursor: pointer;
+}
+section footer .social-icons img:hover{
+    filter: brightness(0) invert(1);
+}
