@@ -382,13 +382,13 @@ section .container .row-1 .col-2{
 /* row 1 */
 
 section .container .row-1 .col-1{
-   background: url(/images/im-4.jpg);
+   background: url(./images/im-4.jpg);
    background-repeat: no-repeat;
    background-size: cover;
 
 }
 section .container .row-1 .col-2{
- background: url(/images/im-7.jpg);
+ background: url(./images/im-7.jpg);
  background-repeat: no-repeat;
 background-size: cover;
 }
