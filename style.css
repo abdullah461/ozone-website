@@ -3,7 +3,6 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    overflow-x:hidden ;
 }
 
 .header{
@@ -135,118 +134,6 @@
   
 
 
-
-/* nav start 
-
-.nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2px 5%;
-    min-height: 85px;
-    background-color: #fff;
-    position: relative;
-}
-.nav .logo img{
-    height: 30px;
-}
-.links{
-    display: flex;
-}
-.links ul {
-    display: flex;   
-}
-.links ul li{
-  display: inline;
-    padding: 15px;
-    list-style: none;
-}
-.links ul li a{
-    display: inline-block;
-    text-decoration: none;
-    color: black;
-    font-family: 'Barlow', sans-serif;
-}
-.nav .links ul li:nth-child(3) a{
-    position: relative;
-}
-.nav .links ul li:nth-child(3) a::before{
-    content: "";
-    position: absolute;
-    bottom: -3.8px;
-    left: 0;
-    width: 100%;
-    height: .7rem;
-    background: #01be633f;
-    border-radius: .5rem;
-    transition: .35s;
-}
-.nav .links ul li:nth-child(3) a:hover::before{
-    background: #01BE62;
-    
-}
-
-/* navi /
-.nav .nav-btn {
-    display: none;
-  }
-  .nav > #nav-check {
-    display: none;
-  }
-
-*/
-
-    /* nav 
-    .nav > .nav-btn {
-        display: inline-block;
-        position: absolute;
-        right: 0px;
-        top: 0px;
-      }
-      .nav > .nav-btn > label {
-        display: inline-block;
-        width: 50px;
-        height: 50px;
-        padding: 13px;
-      }
-      .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-        background-color: rgba(0, 0, 0, 0.3);
-      }
-      .nav > .nav-btn > label > span {
-        display: block;
-        width: 25px;
-        height: 10px;
-        border-top: 2px solid #eee;
-      }
-
-
-      .nav > li {
-        position: absolute;
-        display: block;
-        width: 100%;
-        background-color: #333;
-        height: 0px;
-        transition: all 0.3s ease-in;
-        overflow: hidden;
-        top: 50px;
-        left: 0px;
-      }
-      .nav > li > a {
-        display: block;
-        width: 100%;
-      }
-      .nav > #nav-check:not(:checked) ~ li {
-        height: 0px;
-      }
-      .nav > #nav-check:checked ~ li {
-        height: calc(100vh - 50px);
-        overflow-y: auto;
-      }
-    } */
-    
-
-
-
 /* nav end */
 
 /* banner */
@@ -263,7 +150,7 @@
     overflow: hidden;
 }
 article h1{
-    color: #1b222b;
+    color: #01BE62;
     font-size: 54px;
     font-weight: 600;
     font-family: 'Fraunces', serif;
@@ -276,6 +163,7 @@ article h1{
     font-weight: 200;
     margin-bottom: 20px;
     line-height: 28px;
+    color: #1b222b;
 }
 article a button{
     padding: 15px 30px;
@@ -338,7 +226,30 @@ article a .s-b{
         margin-bottom: 15px;
     }
 }
-/* section */
+
+/* section  start*/
+.container .row{
+    display: flex;
+    margin: 5em 0;
+    flex-wrap: wrap;
+}
+
+/* first section */
+.container .row  img{
+    width: 400px;
+    height: auto;
+}
+.container .row article h3{
+margin-bottom: 0.5em;
+font-size: 32px;
+}
+.container .row article p{
+    font-family: 'Poppins', serif';
+}
+
+/* first section ends */
+
+/* second section */
 section .container .row-1{
     height: 100vh;
     display: flex;
@@ -378,7 +289,10 @@ section .container .row-1 .col-2{
         font-size: 16px;
     }
 }
+
 /* column */
+
+
 /* row 1 */
 
 section .container .row-1 .col-1{
@@ -437,7 +351,61 @@ section .container .row-1 article a:hover::before{
     
 }
 
-/*  row 2 */
+
+/* service */
+.service{
+    /* height: 100vh; */
+    padding-block: 0px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.service h1{
+    margin-bottom: 20px;
+    font-size: 42px;
+    font-family: 'Fraunces', serif;
+}
+.service .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.service .item{
+    min-width: 450px;
+    height: 350px;
+    background-color: white;
+    border-radius: 20px;
+    transition: all .3s;
+}
+.service .item:hover{
+    box-shadow: 4px 10px 10px 4px rgba(20,24,31,.06);
+    
+}
+.service .item-1{
+    background: #99C6D6;
+}
+.service .item-2{
+    background: #36A879;
+}
+.service  .item-3{
+    background: hsl(168, 32%, 55%);
+
+}
+.service .item-4{
+    background: #B3DC77;
+}
+/* end service */
+
+/* icon */
+ion-icon{
+color: #fff;
+font-size: 74px;
+}
+
+ /* row 2
 section .container .row-2{
     height: 100vh;
     display: flex;
@@ -485,7 +453,7 @@ section .container .row-2 article a::before{
 section .container .row-2 article a:hover::before{
     background: #01BE62;
     
-}
+} */
 
 
 
@@ -493,7 +461,7 @@ section .container .row-2 article a:hover::before{
 
 /* third row */
 /* Graphic Design */
-section .container .row-3{
+/* section .container .row-3{
     height: 100vh;
     display: flex;
 }
@@ -523,7 +491,7 @@ section .container .row-3 .col-5 article p{
     font-family: 'Barlow', sans-serif;
 }
 
-/* Photograpy */
+/* Photograpy /
     section .container .row-3 .col-6{
     background-image: url(./images/desktop/image-photography.jpg);
     background-position: center;
@@ -547,11 +515,11 @@ section .container .row-3 .col-6 article p{
     font-size: .8rem;
     color: hsl(198, 62%, 26%);
     font-family: 'Barlow', sans-serif;
-}
+} */
 
 
 /* Client section */
-section .client{
+/* section .client{
     display: flex;
     height: 80vh;
     flex-direction: column;
@@ -606,12 +574,88 @@ section .client .cl img{
 }
 section .boxes{
     display: flex;
-    /* flex-wrap: wrap; */    
+    /* flex-wrap: wrap; /    
 }
 section .boxes .box img{
     width: 100%;
     height: 100%;
+} */
+.future{
+    height: 100vh;
 }
+.future h1{
+    text-align: center;
+    font-size: 42px;
+    font-family: 'Fraunces', serif;
+}
+.future .row{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 100px;
+    flex-wrap: wrap;
+}
+.future .row  img{
+    border-radius: 20px;
+    width: 400px;
+    height: auto;
+    animation: customAni 2s linear 0s infinite normal none;
+}
+@keyframes customAni {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.1);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+
+
+
+.future .row article p{
+    line-height: 30px;
+    font-size: 18px;
+    font-family: 'poppins', sans-serif;
+    margin-bottom: 10px;
+}
+
+.future .row article a{
+    text-decoration: none;
+    color: hsl(212, 27%, 19%);
+    text-transform: uppercase;
+    font-weight: 800;
+  color: black;
+    padding: .5rem;
+    position: relative;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+
+    
+}
+.future .row article a::before{
+    content: "";
+    position: absolute;
+    bottom: .3rem;
+    left: 0;
+    width: 100%;
+    height: .7rem;
+    background: #01be633f;
+    border-radius: .5rem;
+    transition: .35s;
+}
+.future .row article a:hover::before{
+    background: #01BE62; 
+}
+
+
+
+
 /* footer starts here */
 section footer{
     height: 40vh;
@@ -620,6 +664,7 @@ section footer{
     flex-direction: column;
     justify-content: center;
     background: hsl(168, 32%, 55%);
+    /* background-color: #232A34; */
 } 
 section footer .logo{
    color: hsl(167, 40%, 24%);
