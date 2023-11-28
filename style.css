@@ -183,6 +183,7 @@ article a button{
     color: white;
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
+    box-shadow:4px 10px rgba(30, 25, 68, 0.2)
 }
 article a .s-b{
     background-color: transparent;
@@ -376,6 +377,7 @@ section .container .row-1 article a:hover::before{
     margin-bottom: 20px;
     font-size: 42px;
     font-family: 'Fraunces', serif;
+    color: #01BE62;
 }
 .service .row{
     display: flex;
@@ -404,6 +406,7 @@ section .container .row-1 article a:hover::before{
 .service .item-1{
     background: #99C6D6;
     font-family: 'Fraunces', serif;
+    color: #1b222b;
 }
 .service .item-2{
     background: #fff;
@@ -411,6 +414,8 @@ section .container .row-1 article a:hover::before{
 .service  .item-3{
     background: hsl(168, 32%, 55%);
     font-family: 'Fraunces', serif;
+    color: #1b222b;
+
 }
 .service .item-4{
     background: #fff;
@@ -424,7 +429,7 @@ ion-icon{
     
 @media (max-width:768px) {
     .service{
-        margin-top: 10em;
+        margin-top: 15em;
     }
     .service .row-1{
         justify-content: center;
@@ -496,7 +501,7 @@ ion-icon{
     justify-content: space-evenly;
     align-items: center;
     margin-top: 100px;
-    flex-wrap: wrap;
+    
 }
 .future .row  img{
     border-radius: 20px;
@@ -518,9 +523,6 @@ ion-icon{
     }
   }
   
-
-
-
 .future .row article p{
     line-height: 30px;
     font-size: 18px;
@@ -560,6 +562,7 @@ ion-icon{
     .future .row{
         gap: 2em;
         margin-bottom: 100px;
+        flex-wrap: wrap;
     }
     .future article{
         width: 500px;
