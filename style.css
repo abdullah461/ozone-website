@@ -137,7 +137,9 @@
 /* nav end */
 
 /* banner */
-
+iframe{
+    border-radius: 20px;
+}
 .headerContent{
     display: flex;
     width: 100%;
@@ -156,8 +158,15 @@ article h1{
     font-family: 'Fraunces', serif;
     padding-bottom: 20px;
 }
+.container .row .col1 article p{
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    margin-bottom: 20px;
+    line-height: 28px;
+    color: #1b222b;
+}
 .headerContent article p{
-    overflow: hidden;
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
@@ -374,11 +383,19 @@ section .container .row-1 article a:hover::before{
     gap: 20px;
 }
 .service .item{
-    min-width: 450px;
+    width: 450px;
     height: 350px;
     background-color: white;
     border-radius: 20px;
     transition: all .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'poppins', serif;
+    text-align: center;
+    padding: 15px;
 }
 .service .item:hover{
     box-shadow: 4px 10px 10px 4px rgba(20,24,31,.06);
@@ -386,200 +403,86 @@ section .container .row-1 article a:hover::before{
 }
 .service .item-1{
     background: #99C6D6;
+    font-family: 'Fraunces', serif;
 }
 .service .item-2{
-    background: #36A879;
+    background: #fff;
 }
 .service  .item-3{
     background: hsl(168, 32%, 55%);
-
+    font-family: 'Fraunces', serif;
 }
 .service .item-4{
-    background: #B3DC77;
+    background: #fff;
 }
+/* icon */
+
+ion-icon{
+    color: #FFf;
+    font-size: 74px;
+}  
+    
+@media (max-width:768px) {
+    .service{
+        margin-top: 10em;
+    }
+    .service .row-1{
+        justify-content: center;
+    }
+    .service .item-2{
+        height: 200px;
+    }
+    .service .row-2{
+        flex-direction: column-reverse;
+    }
+    .service .row-2 .item-4{
+        height: 200px;
+    }
+}
+@media (max-width:768px) {
+
+} 
 /* end service */
 
-/* icon */
-ion-icon{
-color: #fff;
-font-size: 74px;
-}
-
- /* row 2
-section .container .row-2{
-    height: 100vh;
-    display: flex;
-}
-section .container .row-2 .col-4{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-inline: 50px;
-}
-section .container .row-2 article h1{
-    font-size: 30px;
-       font-family: 'Fraunces', serif;
-        color: hsl(212, 27%, 19%);
-        margin-bottom: 1.5rem;
-}
-section .container .row-2 article p{
-    font-size: 18px;
-    color: hsl(212, 27%, 19%);
-    font-family: 'Barlow', sans-serif;
-    margin-bottom: 1.2rem;
-}
-section .container .row-2 article a{
-    text-decoration: none;
-    color: hsl(212, 27%, 19%);
-    text-transform: uppercase;
-    font-weight: 800;
-    padding: .5rem;
-    position: relative;
-    cursor: pointer;
-    font-family: 'Fraunces', serif;
-    
-}
-section .container .row-2 article a::before{
-    content: "";
-    position: absolute;
-    bottom: .3rem;
-    left: 0;
-    width: 100%;
-    height: .7rem;
-    background: #01BE633f;
-    border-radius: .5rem;
-    transition: .35s;
-}
-section .container .row-2 article a:hover::before{
-    background: #01BE62;
-    
-} */
-
-
-
-
-
-/* third row */
-/* Graphic Design */
-/* section .container .row-3{
-    height: 100vh;
-    display: flex;
-}
-
-section .container .row-3 .col-5{
-    background-image: url(./images/desktop/image-graphic-design.jpg);
-    background-position: center;
-    background-size: cover;
+/* partner */
+.partner{
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;       
+    justify-content: space-evenly;
+    height: 70vh;
+    margin-top: 20px;
 }
-section .container .row-3 .col-5 article{
-    margin-top: 25rem;
+.partner .image img{
+    width: 400px;
+    height: auto;
 }
-section .container .row-3 .col-5 article h1{
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    color: hsl(167, 40%, 24%);
-    margin-bottom: 1rem;
-    font-family: 'Fraunces', serif;
+.partner article {
+    width: 500px;
 }
-section .container .row-3 .col-5 article p{
-    font-size: .8rem;
-    color: hsl(167, 40%, 24%);
-    font-family: 'Barlow', sans-serif;
+.partner article h3{
+    font-family: 'fraunces', serif;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
-
-/* Photograpy /
-    section .container .row-3 .col-6{
-    background-image: url(./images/desktop/image-photography.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-section .container .row-3 .col-6 article{
-    margin-top: 25rem;
-}
-section .container .row-3 .col-6 article h1{
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    color: hsl(198, 62%, 26%);
-    margin-bottom: 1rem;
-    font-family: 'Fraunces', serif;
-}
-section .container .row-3 .col-6 article p{
-    font-size: .8rem;
-    color: hsl(198, 62%, 26%);
-    font-family: 'Barlow', sans-serif;
-} */
-
-
-/* Client section */
-/* section .client{
-    display: flex;
-    height: 80vh;
-    flex-direction: column;
-      background: hsla(42, 92%, 90%, 0.192);
-    
-}
-section .client .top-text{
-    text-align: center;
-    margin: 5rem 0 3rem;
-}
-section .client .top-text h1{
-    color: hsl(210, 4%, 67%);
-    text-transform: uppercase;
-    letter-spacing: .3rem;
-    font-family: 'Fraunces', serif;
-    font-weight: 900;
-}
-section .client p{
-    color: hsl(198, 62%, 26%);
-    margin-bottom: 3rem;
-    line-height: 1.6;
-    font-family: 'Barlow', sans-serif;
-}
-section .client .bottom-content h3{
-    font-weight: 900;
-    font-size: 1.1rem;
-    font-family: 'Fraunces', serif;
-}
-section .client .bottom-content .name-post p{    
-font-size: .8rem;
-font-family: 'Barlow', sans-serif;
+.partner article p{
+    font-family: 'poppins', serif;
+    font-size: 16px;
+    line-height: 1.5em;
 }
 
-section .client .bottom-content{
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    padding: 20px;
-    flex-wrap: wrap;
+@media (max-width:768px) {
+    .partner{
+        flex-direction: column-reverse;
+        height: 100vh;
+    }
+    .partner h3{
+        text-align: center;
+    }
 }
-section .client .cl {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-section .client .cl img{
-    width: 50px;
-    height: 50px;
-    border-radius: 40px;
-    margin-bottom: 3rem;
-}
-section .boxes{
-    display: flex;
-    /* flex-wrap: wrap; /    
-}
-section .boxes .box img{
-    width: 100%;
-    height: 100%;
-} */
+
+/* partner end */
+
+ /* future */
 .future{
     height: 100vh;
 }
@@ -653,7 +556,26 @@ section .boxes .box img{
     background: #01BE62; 
 }
 
+@media (max-width:768px) {
+    .future .row{
+        gap: 2em;
+        margin-bottom: 100px;
+    }
+    .future article{
+        width: 500px;
+    }
+}
+/* future end */
 
+
+/* watch */
+
+@media (max-width:768px) {
+    .watch{
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 
 /* footer starts here */
