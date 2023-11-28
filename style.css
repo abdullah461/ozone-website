@@ -224,6 +224,12 @@ article a .s-b{
         height: auto;
     }
 }
+@media (max-width: 550px){
+    .banner-image img{
+        width: 350px;
+        
+    }
+}
 @media (max-width: 425px){
     .headerContent article h1{
         font-size: 42px;
@@ -246,7 +252,7 @@ article a .s-b{
 
 /* first section */
 .container .row  img{
-    width: 400px;
+    width: 350px;
     height: auto;
 }
 .container .row article h3{
@@ -429,7 +435,7 @@ ion-icon{
     
 @media (max-width:768px) {
     .service{
-        margin-top: 15em;
+        margin-top: 18em;
     }
     .service .row-1{
         justify-content: center;
@@ -444,8 +450,14 @@ ion-icon{
         height: 200px;
     }
 }
-@media (max-width:768px) {
-
+@media (max-width: 550px){
+    .service h1{
+        font-size: 32px;
+    }
+    .service .item{
+        width: 350px;
+        height: 250px;
+    }
 } 
 /* end service */
 
@@ -458,7 +470,7 @@ ion-icon{
     margin-top: 20px;
 }
 .partner .image img{
-    width: 400px;
+    width: 350px;
     height: auto;
 }
 .partner article {
@@ -484,7 +496,11 @@ ion-icon{
         text-align: center;
     }
 }
-
+@media (max-width: 550px){
+    .partner article{
+        width: 350px;
+    }
+}
 /* partner end */
 
  /* future */
@@ -505,7 +521,7 @@ ion-icon{
 }
 .future .row  img{
     border-radius: 20px;
-    width: 400px;
+    width: 350px;
     height: auto;
     animation: customAni 2s linear 0s infinite normal none;
 }
@@ -560,7 +576,7 @@ ion-icon{
 
 @media (max-width:768px) {
     .future .row{
-        gap: 2em;
+        gap: 3em;
         margin-bottom: 100px;
         flex-wrap: wrap;
     }
@@ -568,18 +584,43 @@ ion-icon{
         width: 500px;
     }
 }
+@media (max-width: 550px){
+    .future h1{
+        font-size: 32px;
+    }
+    .future .row article{
+        width: 350px;
+    }
+}
 /* future end */
 
 
 /* watch */
+.watch{
+    margin-block: 8em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'poppins', serif;
+    padding-inline: 20px;
+}
 
 @media (max-width:768px) {
     .watch{
         flex-direction: column;
         align-items: center;
+        gap: 30px;
     }
 }
-
+@media (max-width:550px) {
+    article h1{
+        font-size: 38px;
+    }
+    iframe{
+        width: 300px;
+        height: 250px;
+    }
+}
 
 /* footer starts here */
 section footer{
