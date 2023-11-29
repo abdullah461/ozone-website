@@ -136,6 +136,53 @@
 
 /* nav end */
 
+/* footer starts here */
+section footer{
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    /* background: hsl(168, 32%, 55%); */
+    background: #01be633f;
+} 
+section footer .logo{
+   color: hsl(167, 40%, 24%);
+    margin-bottom: 1.5rem;
+    font-family: 'Fraunces', serif;
+    
+}
+section footer .link{
+    margin-bottom: 1rem;
+    font-family: 'Barlow', sans-serif;
+
+}
+section footer .link ul{
+    overflow: hidden;
+}
+section footer .link ul a{
+    padding: 1rem;
+    text-decoration: none;
+    color: hsl(167, 40%, 24%);
+    cursor: pointer;
+    font-family: 'poppins', sans-serif;
+    font-weight: 200;
+}
+section footer .link ul a:hover{
+    color:white;
+}
+section footer .social-icons img{
+    padding: 1rem;
+    cursor: pointer;
+}
+section footer .social-icons img:hover{
+    filter: brightness(0) invert(1);
+}
+
+/* footer stops here */
+
+
+/* index.html */
 /* banner */
 iframe{
     border-radius: 20px;
@@ -622,43 +669,75 @@ ion-icon{
     }
 }
 
-/* footer starts here */
-section footer{
-    height: 40vh;
+/* contact page */
+.about-container{
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+}
+.about-container .left{
+    width: 50%;
+    display: flex;
     justify-content: center;
-    background: hsl(168, 32%, 55%);
-    /* background-color: #232A34; */
+    align-items: center;
+}
+.about-container .left article h1{
+margin-bottom: 0.5em;
+}
+.about-container .left article p{
+margin-bottom: 1em;
+font-family: 'poppins', serif;
+font-size: 24px;
+font-weight: 200;
+}
+.about-container .right{
+    width: 50%;
+    padding: 100px 50px;
+}
+.about-container .right form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.about-container .right form input{
+    padding: 20px;
+    width: 100%;
+    font-family: 'poppins', sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.1rem;
+    border-radius: 0px;
+    background: transparent;
+    border: 0px;
+    border-bottom: 0.1rem solid rgb(36, 36, 36);
+    transition: border 0.3s ease 0s;
 } 
-section footer .logo{
-   color: hsl(167, 40%, 24%);
-    margin-bottom: 1.5rem;
-    font-family: 'Fraunces', serif;
-    
+.about-container .right form input:active{
+    border-color: #01BE62;
 }
-section footer .link{
-    margin-bottom: 1rem;
-    font-family: 'Barlow', sans-serif;
 
-}
-section footer .link ul{
-    overflow: hidden;
-}
-section footer .link ul a{
-    padding: 1rem;
-    text-decoration: none;
-    color: hsl(167, 40%, 24%);
+.about-container .right form button{
+    width: 150px;
+    padding: 15px 30px;
+    margin-right: 15px;
+    border-radius: 30px;
+    border: none;
+    background-color: #01BE62;
+    color: white;
+    font-family: 'Poppins', sans-serif;
     cursor: pointer;
+    box-shadow:4px 10px rgba(30, 25, 68, 0.2)
 }
-section footer .link ul a:hover{
-    color:white;
-}
-section footer .social-icons img{
-    padding: 1rem;
-    cursor: pointer;
-}
-section footer .social-icons img:hover{
-    filter: brightness(0) invert(1);
+
+@media (max-width:550px) {
+    .about-container{
+        flex-direction: column;
+    }
+    .about-container .left{
+        width: 100%;
+    }
+    .about-container .right{
+        width: 100%;
+    }
 }
